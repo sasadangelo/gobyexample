@@ -8,7 +8,6 @@ import "fmt"
 // Here's a function that takes two `int`s and returns
 // their sum as an `int`.
 func plus(a int, b int) int {
-
 	// Go requires explicit returns, i.e. it won't
 	// automatically return the value of the last
 	// expression.
@@ -19,8 +18,12 @@ func plus(a int, b int) int {
 // the same type, you may omit the type name for the
 // like-typed parameters up to the final parameter that
 // declares the type.
-func plusPlus(a, b, c int) int {
-	return a + b + c
+func plusminus(a, b int) (int, int) {
+	return a + b, a - b
+}
+
+func print(a int) {
+	fmt.Println(a)
 }
 
 func main() {
@@ -30,6 +33,7 @@ func main() {
 	res := plus(1, 2)
 	fmt.Println("1+2 =", res)
 
-	res = plusPlus(1, 2, 3)
-	fmt.Println("1+2+3 =", res)
+	// you must assign two variables
+	sum, sub := plusminus(2, 1)
+	fmt.Println("2+1 =", sum, "2-1=", sub)
 }

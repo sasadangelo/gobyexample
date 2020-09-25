@@ -5,3 +5,4 @@ examples/1-hello-world/bin/hello-world
 examples/2-variables/bin/variables
 examples/3-operators/bin/operators
 examples/4-operators/bin/functions
+examples/4-operators/bin/if-else

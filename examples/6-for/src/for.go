@@ -1,6 +1,5 @@
 // `for` is Go's only looping construct. Here are
 // some basic types of `for` loops.
-
 package main
 
 import "fmt"
@@ -19,14 +18,6 @@ func main() {
 		fmt.Println(j)
 	}
 
-	// `for` without a condition will loop repeatedly
-	// until you `break` out of the loop or `return` from
-	// the enclosing function.
-	for {
-		fmt.Println("loop")
-		break
-	}
-
 	// You can also `continue` to the next iteration of
 	// the loop.
 	for n := 0; n <= 5; n++ {
@@ -35,4 +26,11 @@ func main() {
 		}
 		fmt.Println(n)
 	}
+
+        // `for` without a condition will loop repeatedly
+        // until you `break` out of the loop or `return` from
+        // the enclosing function.
+        for {
+                fmt.Println("press CTRL-C to exit")
+        }
 }

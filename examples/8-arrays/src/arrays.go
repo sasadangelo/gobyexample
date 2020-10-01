@@ -33,6 +33,13 @@ func main() {
 		fmt.Println(fmt.Sprintf("a[%d]: %d", i, a[i]))
 	}
 
+	// you can iterate through an array using the range
+	// function. Notice as the first parameter is the index
+	// and the second is the variable containing the value
+	for index, value := range a {
+		fmt.Printf("a[%d]: %d\n", index, value)
+	}
+
 	// Array types are one-dimensional, but you can
 	// compose types to build multi-dimensional data
 	// structures.

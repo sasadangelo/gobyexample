@@ -1,6 +1,5 @@
 // _Switch statements_ express conditionals across many
 // branches.
-
 package main
 
 import (
@@ -9,7 +8,6 @@ import (
 )
 
 func main() {
-
 	// Here's a basic `switch`.
 	i := 2
 	fmt.Print("Write ", i, " as ")

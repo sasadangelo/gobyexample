@@ -3,7 +3,7 @@
 This is the classical Hello World! program. To run the program do the following:
 
 ```
-export GOPATH=<your workspace>/1-hello-world
+export GOPATH=<your workspace>/01-hello-world
 cd $GOPATH
 go run src/hello-world.go
 ```

@@ -3,7 +3,7 @@
 Compile and run the executable file with the following commands.
 
 ```
-export GOPATH=<your workspace>/6-for
+export GOPATH=<your workspace>/06-for
 cd $GOPATH
 go build -o bin/if-else src/for.go
 bin/for

@@ -1,10 +1,4 @@
 *.pyc
 .idea
 .vscode
-examples/1-hello-world/bin/hello-world
-examples/2-variables/bin/variables
-examples/3-operators/bin/operators
-examples/4-operators/bin/functions
-examples/5-if-else/bin/if-else
-examples/6-for/bin/for
-examples/5-switch/bin/switch
+examples/*/bin

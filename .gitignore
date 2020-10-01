@@ -1,4 +1,5 @@
 *.pyc
 .idea
 .vscode
+!examples/*/bin/.placeholder
 examples/*/bin/*

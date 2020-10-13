@@ -6,24 +6,27 @@ package main
 import "fmt"
 
 func main() {
+        // Unlink arrays, slices are a variable sequence of elements.
+        // They are allocated on heap. We can consider them as
+        // pointers to arrays.
+        var slice []string;
 
-	// Unlike arrays, slices are typed only by the
-	// elements they contain (not the number of elements).
-	// To create an empty slice with non-zero length, use
-	// the builtin `make`. Here we make a slice of
-	// `string`s of length `3` (initially zero-valued).
-	s := make([]string, 3)
-	fmt.Println("emp:", s)
+	// You can allocate a slice using the make command,
+        // specifying the type and the length. The slice's
+        // elements are initialized with the default value 
+        // of the element type. In this case, the empty string.
+	slice = make([]string, 3)
+	fmt.Println("slices:", slice)
 
 	// We can set and get just like with arrays.
 	s[0] = "a"
 	s[1] = "b"
 	s[2] = "c"
-	fmt.Println("set:", s)
-	fmt.Println("get:", s[2])
+        fmt.Println("slices:", slice)
+	fmt.Println("get:", slice[2])
 
 	// `len` returns the length of the slice as expected.
-	fmt.Println("len:", len(s))
+	fmt.Println("len:", len(slice))
 
 	// In addition to these basic operations, slices
 	// support several more that make them richer than
@@ -31,16 +34,16 @@ func main() {
 	// returns a slice containing one or more new values.
 	// Note that we need to accept a return value from
 	// `append` as we may get a new slice value.
-	s = append(s, "d")
-	s = append(s, "e", "f")
-	fmt.Println("apd:", s)
+	slice = append(slice, "d")
+	slice = append(slice, "e", "f")
+	fmt.Println("slice:", slice)
 
 	// Slices can also be `copy`'d. Here we create an
 	// empty slice `c` of the same length as `s` and copy
 	// into `c` from `s`.
-	c := make([]string, len(s))
-	copy(c, s)
-	fmt.Println("cpy:", c)
+	slice_copy := make([]string, len(slice))
+	copy(slice_copy, slice)
+	fmt.Println("slice copy:", slice_copy)
 
 	// Slices support a "slice" operator with the syntax
 	// `slice[low:high]`. For example, this gets a slice

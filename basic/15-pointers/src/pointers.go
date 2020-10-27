@@ -1,7 +1,6 @@
 // Go supports <em><a href="http://en.wikipedia.org/wiki/Pointer_(computer_programming)">pointers</a></em>,
 // allowing you to pass references to values and records
 // within your program.
-
 package main
 
 import "fmt"
@@ -25,18 +24,39 @@ func zeroptr(iptr *int) {
 	*iptr = 0
 }
 
+type person struct {
+        name string
+        age int
+}
+
 func main() {
-	i := 1
-	fmt.Println("initial:", i)
+        // Use of pointers with primitive types
+        var j int = 1
+        var k *int = &j
 
-	zeroval(i)
-	fmt.Println("zeroval:", i)
+        l:= &j
+        fmt.Println("j:", j)
+        fmt.Println("k->", *k)
+        fmt.Println("l->", *l)
 
-	// The `&i` syntax gives the memory address of `i`,
-	// i.e. a pointer to `i`.
-	zeroptr(&i)
-	fmt.Println("zeroptr:", i)
+        // Use of pointers with composite types.
+        // Note the dot operator with pointers de-reference
+        // it automatically
+        var john person=person{"John", 50}
+        var pjohn=&john
+
+        fmt.Println("John age:", john.age)
+        fmt.Println("John age:", pjohn.age)
+
+        // Use of pointers as function parameters
+	zeroval(j)
+	fmt.Println("zeroval:", j)
+
+	// The `&j` syntax gives the memory address of `j`,
+	// i.e. a pointer to `j`.
+	zeroptr(k)
+	fmt.Println("j:", j)
 
 	// Pointers can be printed too.
-	fmt.Println("pointer:", &i)
+	fmt.Println("pointer:", &j)
 }

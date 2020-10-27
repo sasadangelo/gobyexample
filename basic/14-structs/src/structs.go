@@ -1,7 +1,6 @@
 // Go's _structs_ are typed collections of fields.
 // They're useful for grouping data together to form
 // records.
-
 package main
 
 import "fmt"
@@ -22,7 +21,6 @@ func newPerson(name string) *person {
 }
 
 func main() {
-
 	// This syntax creates a new struct.
 	fmt.Println(person{"Bob", 20})
 

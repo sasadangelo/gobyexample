@@ -6,7 +6,6 @@ package main
 import "fmt"
 
 func main() {
-
 	// To create an empty map, use the builtin `make`:
 	// `make(map[key-type]val-type)`.
 	m := make(map[string]int)
@@ -47,4 +46,15 @@ func main() {
 	// the same line with this syntax.
 	n := map[string]int{"foo": 1, "bar": 2}
 	fmt.Println("map:", n)
+
+        // `range` on map iterates over key/value pairs.
+        kvs := map[string]string{"a": "apple", "b": "banana"}
+        for k, v := range kvs {
+                fmt.Printf("%s -> %s\n", k, v)
+        }
+
+	// `range` can also iterate over just the keys of a map.
+        for k := range kvs {
+                fmt.Println("key:", k)
+        }
 }
